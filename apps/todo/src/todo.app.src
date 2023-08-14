@@ -1,0 +1,20 @@
+{application, todo, [
+    {description, "An OTP application"},
+    {vsn, "0.1.0"},
+    {registered, [
+        todo_app,
+        todo_sup
+    ]},
+    {mod, {todo_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        todo_transport_http,
+        todo_items
+    ]},
+    {env,[]},
+    {modules, []},
+
+    {licenses, ["Apache-2.0"]},
+    {links, []}
+]}.

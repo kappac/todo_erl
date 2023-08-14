@@ -1,0 +1,37 @@
+{application, todo_items, [
+    {description, "An OTP application"},
+    {vsn, "0.1.0"},
+    {registered, [
+        todo_items_sup
+    ]},
+    {applications, [
+        kernel,
+        stdlib,
+        cowboy,
+        jiffy,
+        mongodb,
+        poolboy,
+        emodel,
+        uuid,
+        todo_transport_http
+    ]},
+    {env,[
+        {pools, [
+            {model_pool, [
+                {size, 10},
+                {max_overflow, 20}
+            ], [
+                {host, "127.0.0.1"},
+                {database, <<"todos">>},
+                {login, "root"},
+                {password, "password"}
+            ]}
+        ]}
+    ]},
+    {modules, [
+        todo_items_sup
+    ]},
+
+    {licenses, ["Apache-2.0"]},
+    {links, []}
+]}.

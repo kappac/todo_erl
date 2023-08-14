@@ -1,0 +1,21 @@
+{application, todo_transport_http, [
+    {description, "An OTP application"},
+    {vsn, "0.1.0"},
+    {registered, [
+        todo_transport_http_svr,
+        todo_transport_http_sup
+    ]},
+    {applications, [
+        kernel,
+        stdlib,
+        cowboy
+    ]},
+    {env,[]},
+    {modules, [
+        todo_transport_http,
+        todo_transport_http_sup
+    ]},
+
+    {licenses, ["Apache-2.0"]},
+    {links, []}
+]}.
