@@ -10,7 +10,6 @@
         cowboy,
         jiffy,
         mongodb,
-        poolboy,
         emodel,
         uuid,
         todo_transport_http
