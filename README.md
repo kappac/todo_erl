@@ -31,3 +31,4 @@ Using the API
 
     POST Append to a file
     $ curl -v -X POST -H "Content-Type: application/json" http://localhost:8080/api/file -d '{ "filename": "file.txt", "data": "New string" }'
+    Files could be found in `data/files` directory of the project root.
