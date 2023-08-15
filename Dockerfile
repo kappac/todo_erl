@@ -17,4 +17,7 @@ RUN rebar3 release
 
 EXPOSE 8080
 
-CMD ["/project/_build/default/rel/todo/bin/todo", "foreground"]
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
+RUN chmod +x /wait
+
+CMD /wait && /project/_build/default/rel/todo/bin/todo foreground

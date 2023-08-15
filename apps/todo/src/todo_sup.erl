@@ -36,6 +36,12 @@ init([]) ->
             significant => true,
             restart => transient,
             type => supervisor
+        },
+        #{
+            id => todo_file_appender_sup,
+            start => {todo_file_appender_sup, start_link, []},
+            restart => transient,
+            type => supervisor
         }
     ],
 

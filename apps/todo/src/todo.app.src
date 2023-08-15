@@ -10,7 +10,8 @@
         kernel,
         stdlib,
         todo_transport_http,
-        todo_items
+        todo_items,
+        todo_file_appender
     ]},
     {env,[]},
     {modules, []},

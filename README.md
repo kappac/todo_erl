@@ -28,3 +28,6 @@ Using the API
 
     DELETE. Note: please update the UUID in the url to the one valid for your deployment.
     $ curl -v -X DELETE -H "Content-Type: application/json" http://localhost:8080/api/todos/77890d00-5534-4fe6-9fa0-e93f49bced62
+
+    POST Append to a file
+    $ curl -v -X POST -H "Content-Type: application/json" http://localhost:8080/api/file -d '{ "filename": "file.txt", "data": "New string" }'
